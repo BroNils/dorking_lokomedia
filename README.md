@@ -3,15 +3,15 @@ Things u need:
 - Xampp (Min: PHP5)
 - Internet Connection
 
-Bing Dork:
-ip:INPUT_IP_SITE_HERE
-  example "ip:127.0.0.1" (Without "")
+Bing Dork:<br />
+ip:INPUT_IP_SITE_HERE<br />
+  example "ip:127.0.0.1" (Without "")<br />
 
-How to use:
-1.Open cmd
-2.Change directory location to C:\xampp\php
-3.Write command -> php re-loko.php
-4.Input Bing dork
-5.Press Enter And Wait For The Result
+How to use:<br />
+1.Open cmd<br />
+2.Change directory location to C:\xampp\php<br />
+3.Write command -> php re-loko.php<br />
+4.Input Bing dork<br />
+5.Press Enter And Wait For The Result<br />
 
 Happy Hacking ^_^
