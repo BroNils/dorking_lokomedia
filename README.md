@@ -14,4 +14,6 @@ How to use:<br />
 4.Input Bing dork<br />
 5.Press Enter And Wait For The Result<br />
 
+Btw, file u have downloaded must be placed at C:\xampp\php or at your xampp location
+
 Happy Hacking ^_^
