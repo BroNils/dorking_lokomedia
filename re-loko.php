@@ -66,6 +66,10 @@ $do=urlencode($dork);
 		$ada = 0;
 		$gkada = 0;
 		$loko_cek = array(
+		$domain1."/wp-admin",
+		$domain1."/wp-content",
+		$domain1."/wp-login.php",
+		$domain1."/wp-config.php",
 		$domain1."/media.php",
 		$domain1."/downlot.php",
 		$domain1."/berita-1-.html",
@@ -75,12 +79,14 @@ $do=urlencode($dork);
 		$domain1."/galeri-1-.html",
 		$domain1."/agenda-1-.html",
 		$domain1."/statis-1-.html",
+		$domain1."/artikel-1-.html",
 		$domain1."/hasil-poling.html",
 		$domain1."/profil-kami.html",
 		$domain1."/hubungi-kami.html",
 		$domain1."/semua-berita.html",
 		$domain1."/semua-agenda.html",
 		$domain1."/semua-download.html",
+		$domain1."/semua-artikel.html",
 		$domain1."/arsipberita.php",
 		$domain1."/dina_meta1.php",
 		$domain1."/dina_meta2.php",
@@ -111,6 +117,19 @@ echo "\nChecking $domain1\n";
 			echo "(500 Internal Error)\n";
 			$gkada++;
 		} else if($httpCode == 200) {
+			if($loko==$domain1."/wp-admin"){
+				echo "(WordPress) *SKIP*\n";
+				break;
+			} else if($loko==$domain1."/wp-content"){
+				echo "(WordPress) *SKIP*\n";
+				break;
+			} else if($loko==$domain1."/wp-login.php"){
+				echo "(WordPress) *SKIP*\n";
+				break;
+			} else if($loko==$domain1."/wp-config.php"){
+				echo "(WordPress) *SKIP*\n";
+				break;
+			}
 		    echo "(200 OK)\n";
 			$txt = $loko." (200 OK)\n";
             $myfile = file_put_contents("loko".$norand.".txt", $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
@@ -124,6 +143,8 @@ echo "\nChecking $domain1\n";
 	$array_akhir = end($array);
 	if($array_akhir==$domain){
 		echo "\n\n\n\n\n\n\nSelesai boss, hasilnya ada di loko".$norand.".txt\n\nG_Bl0k Security Team ^_^";
+		$txt = "\n\nIP->".$nama_dork;
+        $myfile = file_put_contents("loko".$norand.".txt", $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 	}
 		}
 ?>
