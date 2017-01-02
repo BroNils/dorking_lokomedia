@@ -1,6 +1,9 @@
 <?php
 set_time_limit(0);
 error_reporting(0);
+$version = "3.0"; //DON'T TOUCH THIS !
+$versibaru = "n";
+$dork = $argv[1];
 $norand = rand();
 $banner = '
   [+] ========================================== [+]
@@ -31,7 +34,29 @@ function getsource($url,$post=null) {
 		return curl_exec($ch);
 		  	curl_close($ch);
 	}
-echo "\nMasukan Dork: ";$dork=trim(fgets(STDIN,1024));
+function githubraw($url){
+	$ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $data = curl_exec($ch);
+    curl_close($ch);
+	return $data;
+}
+
+$get_update = githubraw('https://raw.githubusercontent.com/GoogleX133/dorking_lokomedia/master/ver.txt');
+if($get_update==null){
+	$get_update = $version;
+} else if($version!=$get_update){
+	$versibaru = "y";
+}
+
+if($versibaru=="y"){
+	echo "\n\nVersi Baru Tersedia !\n";
+}
+if($dork==null){
+	echo "\nMasukan Dork: ";$dork=trim(fgets(STDIN,1024));
+}
 $pecah_dork = explode(":",$dork);
 $nama_dork = end($pecah_dork);
 $do=urlencode($dork);
