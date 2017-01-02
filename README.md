@@ -17,3 +17,5 @@ How to use:<br />
 Btw, file u have downloaded must be placed at C:\xampp\php or at your xampp location
 
 Happy Hacking ^_^
+
+<hr><br><h1>Changelog:</h1><br>-Update Check<br>-New Command -> php re-loko.php ip:127.0.0.1<br><br>Note: Change 127.0.0.1 with ip site
