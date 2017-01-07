@@ -18,4 +18,4 @@ Btw, file u have downloaded must be placed at C:\xampp\php or at your xampp loca
 
 Happy Hacking ^_^
 
-<hr><br><h1>Changelog:</h1><br>-Update Check<br>-New Command -> php re-loko.php ip:127.0.0.1<br><br>Note: Change 127.0.0.1 with ip site
+<hr><br><h1>Changelog:</h1><br>4.0<br>-Reverse IP with IP Range (e.g 127.0.0.1-127.0.0.255)<br>-New Option !<br><br><br>3.0<br>-Update Check<br>-New Command -> php re-loko.php ip:127.0.0.1<br><br>Note: Change 127.0.0.1 with ip site
