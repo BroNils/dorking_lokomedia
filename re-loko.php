@@ -1,7 +1,7 @@
 <?php
 set_time_limit(0);
 error_reporting(0);
-$version = "2.0"; //DON'T TOUCH THIS !
+$version = "4.0"; //DON'T TOUCH THIS !
 $option = $argv[1];
 $optional = $argv[2];
 $optional2 = $argv[3]; //DEV
@@ -62,15 +62,15 @@ function githubraw($url){
     $data = curl_exec($ch);
     curl_close($ch);
 }
-/*
-$get_update = githubraw('https://raw.githubusercontent.com/GoogleX133/gblk2/master/x.txt');
-if($data==null){
-	$get_update = 
+$get_update = githubraw('https://raw.githubusercontent.com/GoogleX133/dorking_lokomedia/master/ver.txt');
+if($get_update==null){
+	$get_update = $version;
+} else if($version!=$get_update){
+	$versibaru = "y";
 }
-$get_update = $data;
-if(){
-	
-}*/
+if($versibaru=="y"){
+	echo "\n\nVersi Baru Tersedia !\n";
+}
 if($option=="-r"){
 	echo "\nMasukan RangeIP: \n";$rangeip=trim(fgets(STDIN,1024));
 $pecah_range = explode("-",$rangeip);
